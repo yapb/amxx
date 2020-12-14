@@ -262,3 +262,6 @@ shared_library (
 
    gnu_symbol_visibility: 'hidden',
    name_prefix: '')
+
+run_target ('package',
+   command : ['python', meson.source_root() + '/package.py', '@0@.@1@'.format (buildVersion, buildCount)])
