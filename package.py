@@ -142,7 +142,7 @@ class ModuleRelease (object):
          if not os.path.exists (release):
             return
       
-      releaseName = "YaPB " + version
+      releaseName = "YaPB AMXX Module " + version
       releaseMessage = repository.get_commits()[0].commit.message
       releaseSha = repository.get_commits()[0].sha;
 
