@@ -136,7 +136,7 @@ class ModuleRelease (object):
    def createRelease (self, repository, version):
       print ("Creating Github Tag")
       
-      releases = [self.outFileLinux, self.outFileWin32, self.outFileMacOS, self.outFileWin32Setup]
+      releases = [self.outFileLinux, self.outFileWin32, self.outFileMacOS]
       
       for release in releases:
          if not os.path.exists (release):
