@@ -1,0 +1,51 @@
+name: YaPB Module
+
+on:	
+  push:	
+    branches: [master]	
+  pull_request:	
+    branches: [master]
+
+jobs:
+  linux:
+    name: Full Build
+    runs-on: self-hosted
+    
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Meson
+        shell: bash
+        run: | 
+           meson setup build_x86_win32 --cross-file=/actions/meson/windows-msvc-32bit.txt -Db_vscrt=mt
+           meson setup build_x86_macos --cross-file=/actions/meson/darwin-clang-32bit.txt
+           CXX=clang meson setup build_x86_linux
+             
+      - name: Build Module
+        shell: bash
+        run: |
+          ninja -C build_x86_win32 -v
+          ninja -C build_x86_macos -v
+          ninja -C build_x86_linux -v
+          
+      - name: Build Package
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+        run: |
+          meson setup out
+          ninja -C out package
+          
+      - uses: actions/upload-artifact@v2
+        name: Upload Artifacts
+        with:
+          name: yapb.zip
+          path: |
+            build_x86_win32/yapb_amxx.dll
+            build_x86_linux/yapb_amxx_i386.so
+            build_x86_macos/yapb_amxx.dylib
+  
