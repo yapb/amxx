@@ -1,0 +1,11 @@
+*.dll
+*.so
+*.user
+*.json
+
+vc/release
+vc/debug
+vc/.vs
+vc/enc_temp_folder
+
+build/

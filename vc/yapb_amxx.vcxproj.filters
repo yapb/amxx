@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{55dff0ff-c17f-4ef8-9949-652a53eacda0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{0ad17b3f-102e-4f74-b1aa-dd492e79dca2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\ext">
+      <UniqueIdentifier>{11ec3b8b-d4e5-4f43-964c-b84980a6d0e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\ext\crlib">
+      <UniqueIdentifier>{bec0fb46-08b4-4bfa-900c-d279a933ff77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{5e73b918-f42b-4df9-bbe9-918289e44ad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\ext\yapb">
+      <UniqueIdentifier>{430ee1af-b192-4b4d-a572-59718a750ad3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\ext\amxx">
+      <UniqueIdentifier>{5d2cede4-d25d-4f25-aedb-cfdcca69aa6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ext">
+      <UniqueIdentifier>{465e66f8-4aad-405a-b6df-8eb7a5f3d2e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ext\amxx">
+      <UniqueIdentifier>{8b9ea2aa-ca0f-40f0-aae3-cec7b813994c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\inc\version.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-alloc.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-array.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-basic.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-binheap.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-color.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-complete.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-dict.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-files.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-hook.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-http.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-lambda.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-library.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-logger.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-math.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-movable.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-platform.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-random.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-string.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-twin.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-ulz.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-uniqueptr.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\crlib\cr-vector.h">
+      <Filter>inc\ext\crlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\yapb.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\amxx\amxxmodule.h">
+      <Filter>inc\ext\amxx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\amxx\moduleconfig.h">
+      <Filter>inc\ext\amxx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ext\yapb\module.h">
+      <Filter>inc\ext\yapb</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="yapb_amxx.rc">
+      <Filter>res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\inc\version.h.in">
+      <Filter>inc</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\yapb.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ext\amxx\amxxmodule.cpp">
+      <Filter>src\ext\amxx</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
