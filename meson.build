@@ -9,14 +9,14 @@ project (
    'yapb_amxx',
    'cpp',
     
-   version: '0.99',
+   version: '1.0',
    license: 'MIT',
     
    default_options: [
       'buildtype=release',
       'b_ndebug=if-release',
       'cpp_std=c++14',
-      'warning_level=3',
+      'warning_level=2',
       'werror=true',
       'backend=ninja',
       'strip=true',
@@ -75,9 +75,14 @@ if isCLang or isGCC or (isIntel and not isWindows)
       '-m32',
       '-fno-threadsafe-statics',
       '-fno-exceptions',
-      '-fno-rtti'
+      '-fno-rtti',
+      '-Wno-unused-parameter'
    ]
-    
+   
+   if isGCC
+      ccflags += '-Wno-sized-deallocation'
+   endif
+   
    if not isDarwin
       ccflags += [
          '-pedantic',
@@ -233,24 +238,27 @@ sources = files (
 )
 
 includes = include_directories ([
-   '.', 'inc', 'ext',
+   '.', 'inc', 'ext', 'ext/crlib'
 ], is_system: true)
 
 if isWindows and not isCLang
    sources += import('windows').compile_resources (
-      'vc/yapb.rc', 
+      'vc/yapb_amxx.rc', 
       include_directories: includes, 
       args: ['-DVERSION_GENERATED']
    )
 endif
 
+moduleName = meson.project_name ()
+
+if isLinux
+   moduleName += '_i386'
+endif
+
 shared_library (
-   meson.project_name (), 
+   moduleName, 
    sources,
    include_directories: includes,
 
    gnu_symbol_visibility: 'hidden',
    name_prefix: '')
-
-run_target ('package',
-   command : ['python', meson.source_root() + '/package.py', '@0@.@1@'.format (buildVersion, buildCount)])

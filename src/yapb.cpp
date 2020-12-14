@@ -199,10 +199,10 @@ void YaPBModule::load () {
    }
    String ext;
 
-   if (plat.win32) {
+   if (plat.win) {
       ext = "dll";
    }
-   else if (plat.linux) {
+   else if (plat.nix) {
       ext = "so";
    }
    else if (plat.osx) {
@@ -266,3 +266,5 @@ void OnAmxxDetach () {
    yapb.unload ();
 }
 
+// override new/delete globally, need to be included in .cpp file
+#include <crlib/cr-override.h>

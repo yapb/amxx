@@ -13,28 +13,30 @@
   <ItemGroup>
     <ClInclude Include="..\ext\amxx\amxxmodule.h" />
     <ClInclude Include="..\ext\amxx\moduleconfig.h" />
-    <ClInclude Include="..\ext\crlib\cr-alloc.h" />
-    <ClInclude Include="..\ext\crlib\cr-array.h" />
-    <ClInclude Include="..\ext\crlib\cr-basic.h" />
-    <ClInclude Include="..\ext\crlib\cr-binheap.h" />
-    <ClInclude Include="..\ext\crlib\cr-color.h" />
-    <ClInclude Include="..\ext\crlib\cr-complete.h" />
-    <ClInclude Include="..\ext\crlib\cr-dict.h" />
-    <ClInclude Include="..\ext\crlib\cr-files.h" />
-    <ClInclude Include="..\ext\crlib\cr-hook.h" />
-    <ClInclude Include="..\ext\crlib\cr-http.h" />
-    <ClInclude Include="..\ext\crlib\cr-lambda.h" />
-    <ClInclude Include="..\ext\crlib\cr-library.h" />
-    <ClInclude Include="..\ext\crlib\cr-logger.h" />
-    <ClInclude Include="..\ext\crlib\cr-math.h" />
-    <ClInclude Include="..\ext\crlib\cr-movable.h" />
-    <ClInclude Include="..\ext\crlib\cr-platform.h" />
-    <ClInclude Include="..\ext\crlib\cr-random.h" />
-    <ClInclude Include="..\ext\crlib\cr-string.h" />
-    <ClInclude Include="..\ext\crlib\cr-twin.h" />
-    <ClInclude Include="..\ext\crlib\cr-ulz.h" />
-    <ClInclude Include="..\ext\crlib\cr-uniqueptr.h" />
-    <ClInclude Include="..\ext\crlib\cr-vector.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-array.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-basic.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-binheap.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-color.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-complete.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-deque.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-detour.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-files.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-hashmap.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-http.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-lambda.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-library.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-logger.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-math.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-memory.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-movable.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-override.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-platform.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-random.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-string.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-twin.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-ulz.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-uniqueptr.h" />
+    <ClInclude Include="..\ext\crlib\crlib\cr-vector.h" />
     <ClInclude Include="..\ext\yapb\module.h" />
     <ClInclude Include="..\inc\version.h" />
     <ClInclude Include="..\inc\yapb.h" />
@@ -118,7 +120,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\vc;..\inc;..\ext;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\vc;..\inc;..\ext;..\ext\crlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader />
@@ -191,7 +193,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>..\vc;..\inc;..\ext;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\vc;..\inc;..\ext;..\ext\crlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>false</ExceptionHandling>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>

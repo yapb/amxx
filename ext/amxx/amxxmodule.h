@@ -77,6 +77,8 @@ struct amxx_module_info_s
 // The next section is copied from the amx.h file
 // Copyright (c) ITB CompuPhase, 1997-2005
 
+#define HAVE_STDINT_H
+
 #if defined HAVE_STDINT_H
   #include <stdint.h>
 #else
